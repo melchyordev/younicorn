@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "younicorn",
+  "main": "src/server/index.ts",
+  "compatibility_date": "2026-06-03",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "younicorn-local",
+      "database_id": "ea88d0f4-3e30-4b27-819f-4eedcb54f2d0",
+      "migrations_dir": "./src/server/db/migrations",
+    },
+  ],
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging",
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "younicorn-staging",
+          "database_id": "a526001d-66c5-4ecb-9893-542e4173b03c",
+          "migrations_dir": "./src/server/db/migrations",
+        },
+      ],
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production",
+      },
+    },
+  },
+}

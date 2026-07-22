@@ -1,0 +1,27 @@
+---
+import Card from "@/client/components/Card.astro";
+import Hero from "@/client/components/Hero.astro";
+import SignUp from "@/client/components/SignUp.astro";
+import { SubscriberCount } from "@/client/components/SubscriberCount";
+import Layout from "@/client/layouts/Layout.astro";
+---
+
+<Layout>
+	<Hero />
+	<SignUp />
+	<SubscriberCount client:load />
+	<div class="flex flex-col md:flex-row gap-4 p-4 justify-center">
+		<Card
+			title="Your magical awakening"
+			description="After drinking our patented potion, a unicorn horn will begin growing within days. Once fully grown, the horn serves as a conduit for magical engergy, unlocking abilities that grow stronger with practice and experience."
+		/>
+		<Card
+			title="Discover your power"
+			description="Unicorn horns grant access to a wide range of magical talents, from casting luminous spells to manipulating natural elements. Discover your affinity and begin your journey into the mystical arts."
+		/>
+		<Card
+			title="Be an enchanted presence"
+			description="A unicorn horn enhances the user's aura, surrounding them with an unmistakable sense of wonder and enchantment. This magical presence can inspire allies, charm creatures, and make everyday interactions feel touched by a bit of fantasy."
+		/>
+	</div>
+</Layout>

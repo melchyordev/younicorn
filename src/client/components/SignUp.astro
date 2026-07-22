@@ -1,0 +1,20 @@
+---
+import { Mail } from "@lucide/astro";
+---
+
+<div class="grid justify-center justify-items-center gap-4 p-4">
+  <p>
+    Join the waitlist and get notified when our life-changing enhancement
+    releases.
+  </p>
+  <div class="join">
+    <div>
+      <label class="input validator join-item">
+        <Mail class="text-neutral-content" />
+        <input type="email" placeholder="mail@site.com" required />
+      </label>
+      <div class="validator-hint hidden">Enter valid email address</div>
+    </div>
+    <button class="btn btn-neutral join-item">Join</button>
+  </div>
+</div>

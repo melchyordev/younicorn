@@ -1,0 +1,104 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "812d9654-325f-4505-b13f-6eec65ada6d3",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "subscribers": {
+      "name": "subscribers",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'\"2026-06-04T19:55:49.066Z\"'"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'\"2026-06-04T19:55:49.066Z\"'"
+        },
+        "traffic_source": {
+          "name": "traffic_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "device": {
+          "name": "device",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "email_verified": {
+          "name": "email_verified",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "unsubscribed": {
+          "name": "unsubscribed",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "confirmation_token": {
+          "name": "confirmation_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "subscribers_email_unique": {
+          "name": "subscribers_email_unique",
+          "columns": ["email"],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "email": {
+          "name": "email",
+          "value": "\"subscribers\".\"email\" LIKE '%@%.%'"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
